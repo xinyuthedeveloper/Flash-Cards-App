@@ -41,8 +41,8 @@ export function ViewDeck() {
     }
   
 
-  const cardList = deck.cards.map((card) => (
-    <CardView card={card} deck={deck} deleteCardHandler={deleteCardHandler} />
+  const cardList = deck.cards.map((card, index) => (
+    <CardView key={index} card={card} deck={deck} deleteCardHandler={deleteCardHandler} />
   ));
 
   return (

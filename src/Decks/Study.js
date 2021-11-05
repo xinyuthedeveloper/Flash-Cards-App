@@ -47,14 +47,6 @@ export function Study({ decks }) {
   }
 
 
-  function ifNextButton() {
-    return studyState.flipped ? (
-      <button className="btn-warning btn" onClick={nextCard}>
-        Next
-      </button>
-    ) : null;
-  }
-
   //returns whether or not the current card is the last card.
   function atMax() {
     return studyState.currentCard >= studyState.cardMax - 1;
@@ -115,7 +107,12 @@ export function Study({ decks }) {
           <button className="btn btn-primary" onClick={toggleFlip}>
             Flip
           </button>
-          {ifNextButton}
+          {studyState.flipped ? (
+            <button className="btn-warning btn" onClick={nextCard}>
+              Next
+            </button>
+          ) : null
+          }
         </div>
       </div>
     </div>
