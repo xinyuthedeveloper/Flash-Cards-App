@@ -5,7 +5,6 @@ import { createCard, readDeck } from "../../utils/api";
 import { CardForm } from "./CardForm";
 
 export function NewCard() {
-  //set up hooks
   const { deckId } = useParams();
   //create initial form state
   const initializeForm = {

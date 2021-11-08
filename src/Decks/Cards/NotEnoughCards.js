@@ -1,17 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// create the NotEnoughCards JSX. has button to add cards to deck.
-
+//Component gets displayed when cards are less than 3
 export function NotEnoughCards({ deck }) {
-  //tells the user there are not enough cards and prompts them to add more.
-
-  if (
-    //there is no deck object, display Loading...
-    !deck
-  ) {
-    return <p>Loading...</p>;
-  }
   return (
     <div>
       <nav aria-label="breadcrumb">

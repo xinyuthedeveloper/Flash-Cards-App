@@ -8,15 +8,7 @@ export function CardForm({
   changeBack,
 }) {
   const history = useHistory();
-  //if there is no card front, display nothing
-  function cardFront() {
-    return card.front ? card.front : "";
-  }
-  //if there is no card back, display nothing
-  function cardBack() {
-    return card.back ? card.back : "";
-  }
-
+  
   return (
     <form>
       <div className="form-group">
@@ -25,7 +17,7 @@ export function CardForm({
           className="form-control"
           id="front"
           rows="3"
-          value={cardFront()}
+          value={card.front ? card.front : ""}
           onChange={changeFront}
         ></textarea>
       </div>
@@ -35,7 +27,7 @@ export function CardForm({
           className="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
-          value={cardBack()}
+          value={card.back ? card.back : ""}
           onChange={changeBack}
         ></textarea>
       </div>

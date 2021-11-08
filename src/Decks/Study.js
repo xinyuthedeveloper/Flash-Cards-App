@@ -74,9 +74,7 @@ export function Study({ decks }) {
       });
     }
   }
-  //return JSX that displays "content" as either front or back of card info,
-  //  and buttons that change the state when the card is flipped and
-  //  when next card is to be displayed.
+
   return (
     <div>
       <nav aria-label="breadcrumb">

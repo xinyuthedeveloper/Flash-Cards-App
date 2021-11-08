@@ -19,9 +19,7 @@ export function EditCard() {
   //load cards from API to determine new card ID
   useEffect(() => {
     async function loadCard() {
-      //get cards from API
       const loadedCard = await readCard(cardId);
-      //set card id at + 1 length of current card array
       setCard({
         id: cardId,
         deckId: Number(deckId),
