@@ -1,40 +1,28 @@
 import React from "react";
 import { useHistory } from "react-router";
 
-export function DeckForm({
-  submitFunction,
-  deck = {},
-  changeName,
-  changeDesc,
-}) {
+export function DeckForm({ submitFunction, deck = {}, changeName, changeDesc }) {
   const history = useHistory();
 
-  function deckName() {
-    return deck.name ? deck.name : "";
-  }
-
-  function deckDesc() {
-    return deck.description ? deck.description : "";
-  }
   return (
     <form>
-      <div className="form-group">
-        <label htmlFor="exampleFormControlInput1">Deck Name</label>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Deck Name</label>
         <input
           type="text"
-          className="form-control"
+          class="form-control"
           id="exampleFormControlInput1"
-          value={deckName()}
+          value={deck.name ? deck.name : ""}
           onChange={changeName}
         ></input>
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleFormControlTextarea1">Deck Description</label>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Deck Description</label>
         <textarea
-          className="form-control"
+          class="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
-          value={deckDesc()}
+          value={deck.description ? deck.description : ""}
           onChange={changeDesc}
         ></textarea>
       </div>
