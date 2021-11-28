@@ -5,4 +5,4 @@ A flashcard application that generates list of study topics and cards. Users are
 Utilized React router to conditionally render components based on buttons that users interact with
 
 
-Built with HTML, CSS, Bootstrap framework, Javascript, JSX and React framework.
+Built with React, CSS Bootstrap framework, and Javascript.
